@@ -3,9 +3,9 @@ class Application
     resp = Rack::Response.new 
     time = Time.new.to_s.split(" ")[1].split(":").join("").to_i
     if time > 120000 
-      resp.write "Good Morning!" 
-    else 
       resp.write "Good Afternoon!" 
+    else 
+      resp.write "Good Morning!" 
     end 
     resp.finish
   end 
